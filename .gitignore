@@ -6,6 +6,9 @@
 # dotenv files
 .env
 
+# DevContainer local config (contains secrets)
+.devcontainer/devcontainer.local.json
+
 # User-specific files
 *.rsuser
 *.suo
