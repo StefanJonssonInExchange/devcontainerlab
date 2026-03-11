@@ -7,7 +7,7 @@
     "source=${localEnv:SSH_AUTH_SOCK},target=/ssh-agent,type=bind"
   ],
   "containerEnv": {
-    "ANTHROPIC_API_KEY": "${localEnv:ANTHROPIC_API_KEY}",
+    "OPENCODE_API_KEY": "${localEnv:OPENCODE_API_KEY}",
     "SSH_AUTH_SOCK": "/ssh-agent",
     "REPO_URL": "${localEnv:REPO_URL}",
     "OPENCODE_PROMPT": "${localEnv:OPENCODE_PROMPT}"

@@ -15,7 +15,7 @@ A dev container that clones a .NET repository, detects a failing unit test, and 
 - Docker (or a compatible container runtime)
 - VS Code with the Dev Containers extension, **or** the [`devcontainer` CLI](https://github.com/devcontainers/cli)
 - An SSH key added to your SSH agent (`ssh-add`) with access to the target repo
-- An [Anthropic API key](https://console.anthropic.com/)
+- An [OpenCode API key](https://opencode.ai)
 
 ## Setup
 
@@ -25,7 +25,7 @@ Set these on the host before building the container:
 
 ```bash
 export REPO_URL="git@github.com:your-org/devcontainerlab.git"
-export ANTHROPIC_API_KEY="sk-ant-..."
+export OPENCODE_API_KEY="your-opencode-api-key"
 # Optional:
 export OPENCODE_PROMPT="Fix the failing test."
 ```
@@ -54,7 +54,7 @@ devcontainer up --workspace-folder .
 
 ### Azure DevOps / CI
 
-Set `REPO_URL`, `ANTHROPIC_API_KEY`, and `SSH_AUTH_SOCK` as pipeline variables or secrets, then use the `devcontainer` CLI in your pipeline.
+Set `REPO_URL`, `OPENCODE_API_KEY`, and `SSH_AUTH_SOCK` as pipeline variables or secrets, then use the `devcontainer` CLI in your pipeline.
 
 ## Project structure
 
@@ -73,6 +73,6 @@ Tests/            Unit tests that expose the bug
 | Variable | Required | Description |
 |---|---|---|
 | `REPO_URL` | Yes | SSH clone URL of the target repository |
-| `ANTHROPIC_API_KEY` | Yes | Anthropic API key for OpenCode |
+| `OPENCODE_API_KEY` | Yes | API key for OpenCode |
 | `OPENCODE_PROMPT` | No | Custom prompt for OpenCode (default: fix the failing test) |
 | `SSH_AUTH_SOCK` | Yes | Path to the host SSH agent socket (mounted into the container) |

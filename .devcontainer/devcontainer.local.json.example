@@ -1,0 +1,6 @@
+{
+  "_comment": "Copy to devcontainer.local.json and fill in your values. This file is gitignored.",
+  "REPO_URL": "git@github.com:your-org/devcontainerlab.git",
+  "OPENCODE_API_KEY": "your-opencode-api-key",
+  "OPENCODE_PROMPT": "The dotnet test command shows a failing unit test. Fix it."
+}

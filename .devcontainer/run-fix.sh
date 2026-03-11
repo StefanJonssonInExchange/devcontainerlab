@@ -6,7 +6,7 @@ LOCAL_CONFIG="/workspace/devcontainerlab/.devcontainer/devcontainer.local.json"
 if [ -f "$LOCAL_CONFIG" ]; then
   echo "=== Loading config from devcontainer.local.json ==="
   export REPO_URL="${REPO_URL:-$(jq -r '.REPO_URL // empty' "$LOCAL_CONFIG")}"
-  export ANTHROPIC_API_KEY="${ANTHROPIC_API_KEY:-$(jq -r '.ANTHROPIC_API_KEY // empty' "$LOCAL_CONFIG")}"
+  export OPENCODE_API_KEY="${OPENCODE_API_KEY:-$(jq -r '.OPENCODE_API_KEY // empty' "$LOCAL_CONFIG")}"
   export OPENCODE_PROMPT="${OPENCODE_PROMPT:-$(jq -r '.OPENCODE_PROMPT // empty' "$LOCAL_CONFIG")}"
 fi
 
