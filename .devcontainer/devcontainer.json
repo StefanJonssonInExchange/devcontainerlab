@@ -1,0 +1,17 @@
+{
+  "name": "DevContainerLab",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "mounts": [
+    "source=${localEnv:SSH_AUTH_SOCK},target=/ssh-agent,type=bind"
+  ],
+  "containerEnv": {
+    "ANTHROPIC_API_KEY": "${localEnv:ANTHROPIC_API_KEY}",
+    "SSH_AUTH_SOCK": "/ssh-agent",
+    "REPO_URL": "${localEnv:REPO_URL}",
+    "OPENCODE_PROMPT": "${localEnv:OPENCODE_PROMPT}"
+  },
+  "postCreateCommand": "bash .devcontainer/run-fix.sh",
+  "remoteUser": "root"
+}
