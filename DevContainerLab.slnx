@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="DevContainerLab.App/DevContainerLab.App.csproj" />
+  <Project Path="DevContainerLab.Tests/DevContainerLab.Tests.csproj" />
+</Solution>
