@@ -14,7 +14,7 @@ A dev container that clones a .NET repository, detects a failing unit test, and 
 
 - Docker (or a compatible container runtime)
 - VS Code with the Dev Containers extension, **or** the [`devcontainer` CLI](https://github.com/devcontainers/cli)
-- An SSH key added to your SSH agent (`ssh-add`) with access to the target repo
+- An SSH key added to your SSH agent (`ssh-add`) with access to the target repo — the dev container forwards the host SSH agent automatically
 - An [OpenCode API key](https://opencode.ai)
 
 ## Setup
@@ -54,7 +54,7 @@ devcontainer up --workspace-folder .
 
 ### Azure DevOps / CI
 
-Set `REPO_URL`, `OPENCODE_API_KEY`, and `SSH_AUTH_SOCK` as pipeline variables or secrets, then use the `devcontainer` CLI in your pipeline.
+Set `REPO_URL` and `OPENCODE_API_KEY` as pipeline variables or secrets, then use the `devcontainer` CLI in your pipeline.
 
 ## Project structure
 
@@ -75,4 +75,3 @@ Tests/            Unit tests that expose the bug
 | `REPO_URL` | Yes | SSH clone URL of the target repository |
 | `OPENCODE_API_KEY` | Yes | API key for OpenCode |
 | `OPENCODE_PROMPT` | No | Custom prompt for OpenCode (default: fix the failing test) |
-| `SSH_AUTH_SOCK` | Yes | Path to the host SSH agent socket (mounted into the container) |
