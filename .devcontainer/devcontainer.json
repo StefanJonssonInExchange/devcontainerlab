@@ -4,9 +4,10 @@
     "dockerfile": "Dockerfile"
   },
   "containerEnv": {
-    "OPENCODE_API_KEY": "${localEnv:OPENCODE_API_KEY}",
-    "REPO_URL": "${localEnv:REPO_URL}",
-    "OPENCODE_PROMPT": "${localEnv:OPENCODE_PROMPT}"
+    "OPENCODE_MODEL": "${localEnv:OPENCODE_MODEL}",
+    "OPENCODE_PROMPT": "${localEnv:OPENCODE_PROMPT}",
+    "OPENCODE_TIMEOUT": "${localEnv:OPENCODE_TIMEOUT}",
+    "ANTHROPIC_API_KEY": "${localEnv:ANTHROPIC_API_KEY}"
   },
   "postCreateCommand": "bash .devcontainer/run-fix.sh",
   "remoteUser": "root"

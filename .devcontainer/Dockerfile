@@ -14,5 +14,5 @@ RUN mkdir -p /root/.ssh && ssh-keyscan github.com >> /root/.ssh/known_hosts
 # Install OpenCode
 RUN curl -fsSL https://opencode.ai/install | bash
 
-# Add opencode to PATH (install script typically puts it in ~/.local/bin)
-ENV PATH="$PATH:/root/.local/bin"
+# Add opencode to PATH
+ENV PATH="$PATH:/root/.opencode/bin:/root/.local/bin"
